@@ -37,7 +37,7 @@ data "ibm_container_cluster_config" "cluster_config" {
 
 // Module:
 module "cp4d_45" {
-  source = "..\/..\/Module\/cp4d_4.5"
+  source = "../../Module/cp4d_4.5"
   enable = true
 
   // ROKS cluster parameters:

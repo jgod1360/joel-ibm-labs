@@ -306,13 +306,13 @@ resource "null_resource" "install_ca" {
 
   provisioner "local-exec" {
     environment = {
-      CLUSTER_NAME = var.cluster_id
-      KUBECONFIG   = var.cluster_config_path
-      NAMESPACE    = var.cpd_project_name
-      OP_NAMESPACE = var.operator_namespace
-      ON_VPC       = var.on_vpc
-      STORAGE      = local.storage_class
-      RWO_STORAGE  = local.rwo_storage_class
+      CLUSTER_NAME      = var.cluster_id
+      KUBECONFIG        = var.cluster_config_path
+      CP4D_PROJECT      = var.cpd_project_name
+      COMM_SRVC_PROJECT = var.operator_namespace
+      ON_VPC            = var.on_vpc
+      STORAGE           = local.storage_class
+      RWO_STORAGE       = local.rwo_storage_class
     }
 
     working_dir = "${path.module}/scripts/"
